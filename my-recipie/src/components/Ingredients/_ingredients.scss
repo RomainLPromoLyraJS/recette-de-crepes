@@ -1,0 +1,20 @@
+.ingredients {
+   padding: 1em 0;
+
+    &__instructions {
+        border-bottom: 2px solid rgb(216, 208, 208);
+        padding: 1em;
+
+        &:last-child {
+            border-bottom: none;
+          }
+
+        &__span {
+            background-color: #F18042;
+            color: white;
+            border-radius: 0.3em;
+            padding: 0.5em 1em;
+        }
+    }
+    
+}
