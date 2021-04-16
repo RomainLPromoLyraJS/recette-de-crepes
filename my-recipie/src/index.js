@@ -1,8 +1,14 @@
+// == Package imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// == Local imports
+// styles
 import '../src/styles/_index.scss';
 import '../src/styles/_reset.scss';
-import App from '../src/App';
+// components
+import App from './components/App';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

@@ -1,0 +1,38 @@
+.header {
+    text-transform: capitalize;
+    position: relative;
+
+    &__img {
+        border-radius: 0 0 1em 1em;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    &__text { 
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        position: absolute; // --> // to get the content over the image : position relative on the parent (header) + position absolute on the child element (text)
+        background: rgba(0, 0, 0, 0.3);
+        left: 0;
+        right: 0;
+        bottom: 2rem;
+        padding: 2rem;
+        
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.7em;
+        font-style: italic;
+        margin: 0.2em;
+
+        
+    }
+
+    &__level {
+        margin: 0.2em;
+    }
+}
+
+}
