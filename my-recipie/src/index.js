@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 // styles
 import '../src/styles/_index.scss';
 import '../src/styles/_reset.scss';
+import '../src/styles/_vars.scss';
 // components
 import App from './components/App';
 
