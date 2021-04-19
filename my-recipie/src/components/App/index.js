@@ -4,7 +4,7 @@ import React from 'react';
 // LOCALS IMPORTS
 import Header from '../Header'; 
 import Ingredients from '../Ingredients';
-import Recipie from '../Recipie';
+import Recipe from '../Recipe';
 
 // Static data imports
 import recipe from '../../data/recipe';
@@ -24,7 +24,7 @@ function App() {
      difficulty={recipe.difficulty}
      picture={recipe.thumbnail}/>
     <Ingredients />
-    <Recipie />
+    <Recipe steps={recipe.instructions} />
      
      
     </div>
