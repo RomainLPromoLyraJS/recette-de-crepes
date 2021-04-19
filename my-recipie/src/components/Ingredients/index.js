@@ -1,35 +1,34 @@
 // == Package imports
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 // import CSS file
 import '../Ingredients';
 
-const Ingredients = () => {
-    return (
+const Ingredients = ({ ingredients }) => ( 
+    
         <div className="ingredients">
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">375 g</span> de farine tamisée</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">3 pincées</span> de sel</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">50 g</span> de sucre en poudre</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">6</span> oeufs entiers</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">80 g</span> de beurre fondu</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">1 L</span> de lait</p>
-            </div>
-            <div className= "ingredients__instructions">
-                <p><span className="ingredients__instructions__span">3 cuillerées à soupe</span> de rhum ambré ou vieux</p>
-            </div>
+            <ul className= "ingredients__instructions">
+                {ingredients.map(({ id, quantity, unit, name }) => (
+                    <li key={id}><span className="ingredients__instructions__span">{`${quantity} ${unit}`}</span> {name}</li>
+                ))}
+                
+            </ul>
         </div>
-    );
-};
+);
+
+Ingredients.propTypes = {
+    ingredients: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            quantity: PropTypes.string.isRequired,
+            unit: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+
+        }).isRequired,
+    )
+}
+
 
 export default Ingredients;

@@ -23,7 +23,7 @@ function App() {
      author={recipe.author}   
      difficulty={recipe.difficulty}
      picture={recipe.thumbnail}/>
-    <Ingredients />
+    <Ingredients ingredients={recipe.ingredients}/>
     <Recipe steps={recipe.instructions} />
      
      
